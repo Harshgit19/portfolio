@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harshavardhan Gajula - Business Data Analyst</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Harshavardhan Gajula - Software Engineer</title>
     <style>
         * {
             margin: 0;
@@ -12,463 +11,227 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --primary-blue: #1e3a8a;
-            --secondary-blue: #3b82f6;
-            --light-blue: #dbeafe;
-            --accent-blue: #60a5fa;
-            --dark-blue: #1e40af;
-            --white: #ffffff;
-            --light-gray: #f8fafc;
-            --border-gray: #e2e8f0;
-        }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #334155;
-            background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%);
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
         }
 
-        /* Header Styles */
         header {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
-            color: var(--white);
-            padding: 2rem 0;
-            position: relative;
-            overflow: hidden;
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
         }
 
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: fadeInDown 1s;
         }
 
-        .header-content {
-            position: relative;
-            z-index: 1;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 2rem;
-            align-items: center;
+        header .tagline {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            opacity: 0.95;
         }
 
-        .hero-text h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(45deg, var(--white), var(--accent-blue));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-text .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+        header .summary {
+            max-width: 800px;
+            margin: 20px auto;
+            font-size: 1.1em;
+            line-height: 1.8;
             opacity: 0.9;
         }
 
-        .hero-text .description {
-            font-size: 1.1rem;
-            opacity: 0.8;
-            max-width: 600px;
+        .social-links {
+            margin-top: 20px;
         }
 
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
-
-        .stat-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--accent-blue);
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        /* Navigation */
-        nav {
-            background: var(--white);
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        .nav-link {
-            color: var(--primary-blue);
+        .social-links a {
+            color: white;
             text-decoration: none;
-            font-weight: 600;
-            padding: 0.5rem 1rem;
+            margin: 0 15px;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border: 2px solid white;
             border-radius: 25px;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-link:hover {
-            background: var(--light-blue);
-            transform: translateY(-2px);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 4rem 0;
-            margin: 2rem 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-            position: relative;
+            transition: all 0.3s;
             display: inline-block;
         }
 
-        .section-title::after {
+        .social-links a:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .content {
+            background: white;
+            border-radius: 20px;
+            margin-top: -50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        section {
+            padding: 50px 40px;
+            border-bottom: 1px solid #eee;
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 2.2em;
+            color: #667eea;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
             content: '';
             position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(45deg, var(--secondary-blue), var(--accent-blue));
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #764ba2;
             border-radius: 2px;
         }
 
-        /* Skills Section */
+        .experience-item, .project-item {
+            margin-bottom: 40px;
+        }
+
+        .experience-item h3, .project-item h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .experience-item .role {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .experience-item .duration, .project-item .tech {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .experience-item ul, .project-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item li, .project-item li {
+            padding-left: 25px;
+            margin-bottom: 10px;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        .experience-item li::before, .project-item li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #764ba2;
+            font-weight: bold;
+        }
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 30px;
         }
 
         .skill-category {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            border-top: 4px solid var(--secondary-blue);
-            transition: transform 0.3s ease;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            transition: transform 0.3s;
         }
 
         .skill-category:hover {
             transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         }
 
         .skill-category h3 {
-            color: var(--primary-blue);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
         }
 
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+        .skill-category p {
+            color: #555;
+            line-height: 1.8;
         }
 
-        .skill-tag {
-            background: var(--light-blue);
-            color: var(--primary-blue);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
+        .education-item {
+            margin-bottom: 30px;
         }
 
-        /* Experience Section */
-        .experience-timeline {
-            position: relative;
-            margin-top: 2rem;
+        .education-item h3 {
+            color: #333;
+            font-size: 1.4em;
         }
 
-        .experience-timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--secondary-blue), var(--accent-blue));
-            border-radius: 2px;
+        .education-item .degree {
+            color: #667eea;
+            font-size: 1.1em;
+            margin: 5px 0;
         }
 
-        .experience-item {
+        .education-item .details {
+            color: #666;
+            font-style: italic;
+        }
+
+        .certifications {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            position: relative;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
         }
 
-        .experience-item:nth-child(even) .experience-card {
-            grid-column: 2;
+        .cert-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #764ba2;
         }
 
-        .experience-item:nth-child(odd) .experience-card {
-            grid-column: 1;
+        .cert-item h4 {
+            color: #333;
+            margin-bottom: 5px;
         }
 
-        .experience-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            border-left: 4px solid var(--secondary-blue);
-            position: relative;
+        .cert-item p {
+            color: #666;
+            font-size: 0.9em;
         }
 
-        .experience-card::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            width: 20px;
-            height: 20px;
-            background: var(--secondary-blue);
-            border-radius: 50%;
-            border: 4px solid var(--white);
-            box-shadow: 0 0 0 4px var(--secondary-blue);
-        }
-
-        .experience-item:nth-child(odd) .experience-card::before {
-            right: -42px;
-        }
-
-        .experience-item:nth-child(even) .experience-card::before {
-            left: -42px;
-        }
-
-        .company {
-            color: var(--primary-blue);
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .role {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin: 0.5rem 0;
-        }
-
-        .duration {
-            color: var(--secondary-blue);
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .achievements {
-            list-style: none;
-        }
-
-        .achievements li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .achievements li::before {
-            content: '▶';
-            position: absolute;
-            left: 0;
-            color: var(--secondary-blue);
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            border-top: 4px solid var(--secondary-blue);
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-header {
-            background: linear-gradient(135deg, var(--light-blue), var(--white));
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--border-gray);
-        }
-
-        .project-title {
-            color: var(--primary-blue);
-            font-size: 1.3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .tech-tag {
-            background: var(--secondary-blue);
-            color: var(--white);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .accuracy-badge {
-            background: linear-gradient(45deg, #10b981, #059669);
-            color: var(--white);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            display: inline-block;
-            margin-top: 0.5rem;
-        }
-
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .contact-item {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            border-top: 4px solid var(--secondary-blue);
-        }
-
-        .contact-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .contact-icon {
-            font-size: 2rem;
-            color: var(--secondary-blue);
-            margin-bottom: 1rem;
-        }
-
-        .contact-link {
-            color: var(--primary-blue);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-link:hover {
-            color: var(--secondary-blue);
-        }
-
-        /* Footer */
         footer {
-            background: var(--primary-blue);
-            color: var(--white);
             text-align: center;
-            padding: 2rem 0;
-            margin-top: 4rem;
+            padding: 40px 20px;
+            color: white;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-
-            .experience-timeline::before {
-                left: 30px;
-            }
-
-            .experience-item {
-                grid-template-columns: 1fr;
-                margin-left: 60px;
-            }
-
-            .experience-item:nth-child(even) .experience-card,
-            .experience-item:nth-child(odd) .experience-card {
-                grid-column: 1;
-            }
-
-            .experience-card::before {
-                left: -72px !important;
-            }
-
-            .nav-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem;
-            }
-        }
-
-        /* Animation */
-        @keyframes fadeInUp {
+        @keyframes fadeInDown {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(-20px);
             }
             to {
                 opacity: 1;
@@ -476,350 +239,196 @@
             }
         }
 
-        .animate-in {
-            animation: fadeInUp 0.6s ease forwards;
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header .tagline {
+                font-size: 1.1em;
+            }
+
+            section {
+                padding: 30px 20px;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .skills-grid, .certifications {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="hero-text">
-                    <h1>Harshavardhan Gajula</h1>
-                    <p class="subtitle">Business Data Analyst</p>
-                    <p class="description">Optimizing business operations through data-driven insights and predictive analytics. 2+ years of experience in process improvement, system integration, and dashboard development.</p>
-                </div>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-number">35%</div>
-                        <div class="stat-label">Efficiency Improvement</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">99%</div>
-                        <div class="stat-label">Data Integrity</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">2+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Stakeholders Managed</div>
-                    </div>
-                </div>
+    <div class="container">
+        <header>
+            <h1>Harshavardhan Gajula</h1>
+            <div class="tagline">Software Engineer</div>
+            <div class="summary">
+                Software Engineer experienced in delivering secure, scalable, and high-quality technology solutions. 
+                Skilled in designing distributed systems, developing RESTful services, building production-grade 
+                Java/Spring applications, and constructing resilient data pipelines across AML/KYC and financial domains. 
+                Proficient in Java, Spring Boot, SQL, Python, CI/CD, and cloud services.
             </div>
-        </div>
-    </header>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/harshavardhan-gajula/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/Harshgit19" target="_blank">GitHub</a>
+                <a href="mailto:harsha@example.com">Contact</a>
+            </div>
+        </header>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <div class="nav-container">
-                <a href="#skills" class="nav-link"><i class="fas fa-cogs"></i> Skills</a>
-                <a href="#experience" class="nav-link"><i class="fas fa-briefcase"></i> Experience</a>
-                <a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a>
-                <a href="#education" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a>
-                <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Technical Expertise</h2>
-                <p>Comprehensive skill set spanning business analysis and data science</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">R</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">PL/SQL</span>
-                        <span class="skill-tag">HTML</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Data & Analytics</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">Predictive Analytics</span>
-                        <span class="skill-tag">Data Mining</span>
-                        <span class="skill-tag">Statistical Analysis</span>
-                        <span class="skill-tag">NLP</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-chart-bar"></i> Visualization Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Power BI</span>
-                        <span class="skill-tag">Tableau</span>
-                        <span class="skill-tag">Python Matplotlib</span>
-                        <span class="skill-tag">Excel</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-cloud"></i> Platforms & Tools</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Snowflake</span>
-                        <span class="skill-tag">Informatica</span>
-                        <span class="skill-tag">Git/GitHub</span>
-                        <span class="skill-tag">Agile</span>
-                        <span class="skill-tag">Lean Six Sigma</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-sitemap"></i> Business Analysis</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Process Modeling</span>
-                        <span class="skill-tag">Requirements Gathering</span>
-                        <span class="skill-tag">System Integration</span>
-                        <span class="skill-tag">UAT Coordination</span>
-                        <span class="skill-tag">BRD/SRS</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> ML Libraries</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">Keras</span>
-                        <span class="skill-tag">Pandas</span>
-                        <span class="skill-tag">NumPy</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Professional Experience</h2>
-                <p>Driving business optimization through data-driven solutions</p>
-            </div>
-            <div class="experience-timeline">
+        <div class="content">
+            <section id="experience">
+                <h2>Professional Experience</h2>
+                
                 <div class="experience-item">
-                    <div class="experience-card">
-                        <div class="company">ARCUTURUS TECHNOLOGY SOLUTIONS</div>
-                        <div class="role">Business Data Analyst</div>
-                        <div class="duration">Sep 2022 – Aug 2023 | Hyderabad, India</div>
-                        <ul class="achievements">
-                            <li>Led process analysis with 15+ stakeholders, identifying 30% optimization opportunities</li>
-                            <li>Reduced manual interventions by 25% through TO-BE process design</li>
-                            <li>Improved OMS efficiency by 15% and production sequencing by 30%</li>
-                            <li>Achieved 99% data integrity across ERP/WMS systems</li>
-                            <li>Developed Power BI dashboards speeding decision-making by 20%</li>
-                            <li>Applied Lean Six Sigma resulting in 20% cross-functional efficiency increase</li>
-                        </ul>
-                    </div>
+                    <h3>ARCUTURUS TECHNOLOGY SOLUTIONS</h3>
+                    <div class="role">Software Engineer</div>
+                    <div class="duration">Hyderabad, India | Sept 2022 - Aug 2023</div>
+                    <ul>
+                        <li>Designed, developed, and optimized <strong>Java/Spring Boot services, REST APIs, and microservice components</strong> supporting automation and AML/KYC flows across enterprise systems, improving processing consistency by <strong>~20%</strong> across environments.</li>
+                        <li>Produced detailed <strong>architecture diagrams, sequence flows, design documents, and API/data specifications</strong>, strengthening integration accuracy between ERP, WMS, and compliance platforms and reducing cross-system mapping errors by <strong>15%</strong>.</li>
+                        <li>Implemented <strong>exception handling, validation layers, logging frameworks, and monitoring hooks</strong>, which lowered recurring production incidents by <strong>25-30%</strong> and measurably improved application fault-tolerance.</li>
+                        <li>Engineered <strong>SQL-based ETL logic, high-volume data pipelines, reconciliation routines, and schema structures</strong>, achieving <strong>99% data accuracy</strong> for large transactional datasets and improving downstream reliability across teams.</li>
+                        <li>Contributed to <strong>CI/CD pipelines, automated build/deployment processes, versioning strategies</strong>, and UAT/QA operations, supporting <strong>8+ multi-module releases</strong> with consistent defect triage, debugging, and remediation coverage.</li>
+                    </ul>
                 </div>
+
                 <div class="experience-item">
-                    <div class="experience-card">
-                        <div class="company">COGNIZANT TECHNOLOGY SOLUTIONS</div>
-                        <div class="role">Programmer Analyst</div>
-                        <div class="duration">Apr 2022 – Aug 2022 | Hyderabad, India</div>
-                        <ul class="achievements">
-                            <li>Developed interactive dashboards reducing decision-making cycles by 20%</li>
-                            <li>Applied SQL queries reducing data inconsistencies by 30%</li>
-                            <li>Implemented data validation tests lowering production error rates</li>
-                            <li>Achieved 10% increase in operational efficiency through process improvement</li>
-                        </ul>
-                    </div>
+                    <h3>COGNIZANT TECHNOLOGY SOLUTIONS</h3>
+                    <div class="role">Programmer Analyst</div>
+                    <div class="duration">Bengaluru, India | Feb 2022 - Aug 2022</div>
+                    <ul>
+                        <li>Worked on <strong>service logic, analytics modules, and system enhancements</strong> supporting reporting and financial data workflows, improving module stability and reducing manual reporting effort by <strong>~10%</strong>.</li>
+                        <li>Created optimized <strong>SQL queries, stored procedures, validation routines, and schema improvements</strong>, reducing data inconsistencies by <strong>30%</strong> and boosting accuracy of operational reporting across major business units.</li>
+                        <li>Improved system responsiveness by enhancing <strong>API interactions, data processing logic, and transformation flows</strong>, contributing to <strong>15-20% faster</strong> response times during UAT and performance testing cycles.</li>
+                        <li>Collaborated with engineering leads to convert business requirements into <strong>technical specifications, scalable data structures, and design elements</strong>, ensuring delivery quality by maintaining documentation and acceptance criteria across multiple sprint cycles.</li>
+                    </ul>
                 </div>
+
                 <div class="experience-item">
-                    <div class="experience-card">
-                        <div class="company">VERZEO (Microsoft Partner)</div>
-                        <div class="role">Machine Learning Intern</div>
-                        <div class="duration">Nov 2020 – Dec 2020 | Bangalore, India</div>
-                        <ul class="achievements">
-                            <li>Developed ML models using Python for real-world applications</li>
-                            <li>Applied data preprocessing and feature selection techniques</li>
-                            <li>Enhanced model performance through evaluation techniques</li>
-                            <li>Contributed to real-time ML projects and data-driven solutions</li>
-                        </ul>
+                    <h3>VERZEO (Microsoft Partner)</h3>
+                    <div class="role">Machine Learning Intern</div>
+                    <div class="duration">Bengaluru, India | Aug 2020 - Apr 2021</div>
+                    <ul>
+                        <li>Built ML models using Python, applying preprocessing, feature engineering, and evaluation techniques for improved accuracy.</li>
+                        <li>Integrated model logic into small API workflows and supported automation tasks within assigned application modules.</li>
+                        <li>Performed data cleaning, transformation, and exploratory analysis to prepare reliable inputs for model training pipelines.</li>
+                        <li>Worked with mentors to debug scripts, validate outputs, and document findings to strengthen the overall ML workflow.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <p>Java (Spring Boot, Microservices), Python, SQL, R, HTML</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Database & Data Modeling</h3>
+                        <p>MySQL, Oracle SQL, Microsoft SQL Server, PL/SQL</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Cloud & AI Technologies</h3>
+                        <p>AWS, Snowflake, OpenAI APIs, TensorFlow, PyTorch, Copilot, LangChain, Prompt Engineering</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Data Integration & BI Tools</h3>
+                        <p>Tableau, Power BI, Kafka, Informatica, API Testing, Postman</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Development Platforms</h3>
+                        <p>Git/GitHub, Jenkins, Docker, Agile, MS Excel</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Core Competencies</h3>
+                        <p>Data Application Development, Debugging, Troubleshooting, Distributed Systems, API Design, Data Pipelines, Logging/Monitoring, Security, Application Resiliency</p>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <section id="projects">
+                <h2>Academic Projects</h2>
+                
+                <div class="project-item">
+                    <h3>Heart Attack Detection using Machine Learning</h3>
+                    <div class="tech">Technologies: Python, Logistic Regression, Random Forests</div>
+                    <ul>
+                        <li>Analyzed healthcare data to develop a predictive model for heart attack risk using machine learning techniques.</li>
+                        <li>Applied data preprocessing and feature selection to achieve <strong>85% accuracy</strong>, offering valuable insights for early detection and informed healthcare decisions.</li>
+                        <li>Presented paper at ICSTEM-22 Conference and published in IFERP (May 2022).</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <h3>Credit Card Fraud Detection using Machine Learning</h3>
+                    <div class="tech">Technologies: Python, Logistic Regression, Random Forest</div>
+                    <ul>
+                        <li>Built a machine learning model to detect fraudulent credit card transactions by analyzing transaction data.</li>
+                        <li>Achieved <strong>95% accuracy</strong> and enabled real-time fraud detection to enhance security.</li>
+                        <li>Published paper at IACIT-2021 Conference (May 2021).</li>
+                    </ul>
+                </div>
+
+                <div class="project-item">
+                    <h3>Husky Restaurant Review Website</h3>
+                    <div class="tech">Technologies: Database Design, SQL, Web Development</div>
+                    <ul>
+                        <li>Designed a centralized database for restaurant reviews and reservations.</li>
+                        <li>Improved data accuracy by <strong>99%</strong> and processed <strong>2TB+</strong> of data daily for enhanced user experience and scalability.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                
+                <div class="education-item">
+                    <h3>Northeastern University (D'Amore-McKim School of Business)</h3>
+                    <div class="degree">Master of Science in Business Analytics</div>
+                    <div class="details">Boston, MA, USA | Sept 2023 - Dec 2024</div>
+                </div>
+
+                <div class="education-item">
+                    <h3>Reva University</h3>
+                    <div class="degree">Bachelor of Technology in Computer Science</div>
+                    <div class="details">Bengaluru, India | Aug 2018 - Jun 2022</div>
+                </div>
+            </section>
+
+            <section id="certifications">
+                <h2>Publications & Certifications</h2>
+                
+                <div class="certifications">
+                    <div class="cert-item">
+                        <h4>Microsoft Power BI Data Analyst Associate</h4>
+                        <p>Certified Professional</p>
+                    </div>
+                    <div class="cert-item">
+                        <h4>Generative AI Professional</h4>
+                        <p>Oracle Cloud Infrastructure 2024</p>
+                    </div>
+                    <div class="cert-item">
+                        <h4>Databases and SQL for Data Science</h4>
+                        <p>Certificate of Completion</p>
+                    </div>
+                    <div class="cert-item">
+                        <h4>Data Analytics with Python</h4>
+                        <p>NPTEL (IIT Roorkee) - Authorized by Govt. of India</p>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Key Projects</h2>
-                <p>Machine learning and data analytics solutions with measurable impact</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-title">Heart Attack Detection System</div>
-                    </div>
-                    <div class="project-content">
-                        <p>Developed a predictive model for heart attack risk assessment using advanced machine learning techniques. Applied comprehensive data preprocessing and feature selection to optimize model performance.</p>
-                        <div class="accuracy-badge">85% Accuracy Achieved</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Logistic Regression</span>
-                            <span class="tech-tag">Random Forest</span>
-                            <span class="tech-tag">Healthcare Analytics</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-title">Credit Card Fraud Detection</div>
-                    </div>
-                    <div class="project-content">
-                        <p>Built an advanced ML model for real-time fraud detection in credit card transactions. Implemented sophisticated algorithms to identify fraudulent patterns and enhance financial security.</p>
-                        <div class="accuracy-badge">95% Accuracy Achieved</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Machine Learning</span>
-                            <span class="tech-tag">Fraud Analytics</span>
-                            <span class="tech-tag">Real-time Processing</span>
-                            <span class="tech-tag">Financial Security</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-title">Husky Restaurant Review Platform</div>
-                    </div>
-                    <div class="project-content">
-                        <p>Designed and implemented a centralized database system for restaurant reviews and reservations. Achieved exceptional data accuracy while processing massive daily data volumes.</p>
-                        <div class="accuracy-badge">99% Data Accuracy</div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Database Design</span>
-                            <span class="tech-tag">Big Data</span>
-                            <span class="tech-tag">2TB+ Daily Processing</span>
-                            <span class="tech-tag">Web Development</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Education & Certifications</h2>
-                <p>Strong academic foundation in business analytics and computer science</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-university"></i> Master's Degree</h3>
-                    <p><strong>Master of Science in Business Analytics</strong><br>
-                    Northeastern University (D'Amore-McKim School of Business)<br>
-                    Boston, MA, USA | Dec 2024</p>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-graduation-cap"></i> Bachelor's Degree</h3>
-                    <p><strong>Bachelor of Technology in Computer Science</strong><br>
-                    Reva University<br>
-                    Karnataka, India | June 2022</p>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-certificate"></i> Professional Certifications</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Microsoft Power BI Data Analyst</span>
-                        <span class="skill-tag">Oracle Cloud Infrastructure GenAI</span>
-                        <span class="skill-tag">SQL for Data Science</span>
-                        <span class="skill-tag">Python Data Analytics (NPTEL)</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-award"></i> Publications</h3>
-                    <p>• "Heart Attack Detection using Machine Learning" - ICSTEM-22 Conference<br>
-                    • "Credit Card Fraud Detection using Machine Learning" - IACIT-2021 Conference</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p>Let's discuss how data analytics can drive your business forward</p>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <h3>Email</h3>
-                    <a href="mailto:g.harshav12@gmail.com" class="contact-link">g.harshav12@gmail.com</a>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <h3>Phone</h3>
-                    <a href="tel:8577538419" class="contact-link">(857) 753-8419</a>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                    <h3>LinkedIn</h3>
-                    <a href="https://linkedin.com/in/harshavardhan-gajula" class="contact-link" target="_blank">LinkedIn Profile</a>
-                </div>
-                <div class="contact-item">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h3>Location</h3>
-                    <p>Boston, MA</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Harshavardhan Gajula. All rights reserved. | Business Data Analyst Portfolio</p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Animate elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
-                }
-            });
-        }, observerOptions);
-
-        //
+        <footer>
+            <p>&copy; 2024 Harshavardhan Gajula. All rights reserved.</p>
+            <p>Boston, MA</p>
+        </footer>
+    </div>
+</body>
+</html>
